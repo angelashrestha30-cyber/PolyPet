@@ -1,116 +1,109 @@
-/* GLOBAL */
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ffe6ec, #ffffff);
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* NAVIGATION */
+body {
+  background: linear-gradient(180deg, #f8c8c8 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
 nav {
+  background: white;
+  padding: 18px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 nav h2 {
-  margin: 0;
   font-weight: 700;
 }
 
 nav a {
   margin-left: 25px;
   text-decoration: none;
-  color: #444;
   font-weight: 600;
+  color: #333;
 }
 
-nav a:hover {
-  color: #ff6b81;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-}
-
-.hero h1 {
-  font-size: 42px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 600px;
-  margin: auto;
-}
-
-/* CONTAINER */
 .container {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 40px;
 }
 
-/* CARD */
 .card {
   background: white;
-  padding: 30px;
   border-radius: 20px;
-  width: 350px;
-  margin: 30px auto;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
 }
 
-/* BUTTONS */
 button {
-  padding: 10px 18px;
-  border-radius: 12px;
   border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  margin: 8px;
-  background: #ff6b81;
+  margin-top: 10px;
+}
+
+.primary {
+  background: #ff6b6b;
   color: white;
 }
 
-button:hover {
-  opacity: 0.9;
-}
-
-/* PROGRESS BARS */
-.bar {
+.secondary {
   background: #eee;
-  height: 12px;
-  border-radius: 10px;
-  margin-bottom: 12px;
 }
 
-.bar div {
+.progress-bar {
+  background: #eee;
+  height: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 10px 0 20px 0;
+}
+
+.progress-fill {
   height: 100%;
-  border-radius: 10px;
-  background: #ff6b81;
+  background: #ff6b6b;
   width: 50%;
+  transition: 0.3s;
 }
 
-/* MOBILE RESPONSIVE */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.course-card {
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
-    text-align: center;
+    padding: 15px 20px;
   }
 
-  nav div {
-    margin-top: 10px;
+  .container {
+    padding: 20px;
   }
 
-  .hero h1 {
-    font-size: 28px;
-  }
-
-  .card {
-    width: 90%;
+  .course-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -27,3 +27,10 @@ function changeName() {
   let newName = prompt("Enter new pet name:");
   if (newName) document.getElementById("petName").innerText = newName;
 }
+window.onload = function() {
+  const user = localStorage.getItem("user");
+  if (user) {
+    document.getElementById("welcomeUser").innerText = user;
+  }
+  updateBars();
+}

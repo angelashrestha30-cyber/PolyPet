@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PolyPet Demo</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
-<body onload="updateBars()">
+<body onload="checkLogin(); updateBars();">
 
 <nav>
-  <h2>PolyPet</h2>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="spanish.html">Flashcards</a>
-    <a href="grammar.html">Quiz</a>
-  </div>
+<h2>PolyPet</h2>
+<div>
+<a href="dashboard.html">Home</a>
+<a href="pets.html">Pet Collection</a>
+<a href="schedule.html">Schedule</a>
+<a href="resources.html">Resources</a>
+</div>
 </nav>
 
 <div class="container">
-  <h1>Pet Dashboard</h1><h2>Welcome, <span id="welcomeUser"></span></h2>
 
-  <div class="card">
-    <h2 id="petName" onclick="changeName()">Pika</h2>
+<div class="card">
+<h2 id="petName" onclick="changeName()" style="cursor:pointer;">Pika</h2>
 
-    <p>Hunger</p>
-    <div class="bar"><div id="hunger"></div></div>
+<p>Hunger</p>
+<div class="progress-bar"><div id="hungerFill" class="progress-fill"></div></div>
 
-    <p>Hygiene</p>
-    <div class="bar"><div id="hygiene"></div></div>
+<p>Hygiene</p>
+<div class="progress-bar"><div id="hygieneFill" class="progress-fill"></div></div>
 
-    <p>Play</p>
-    <div class="bar"><div id="play"></div></div>
+<p>Playtime</p>
+<div class="progress-bar"><div id="playFill" class="progress-fill"></div></div>
 
-    <button onclick="feed()">Feed</button>
-    <button onclick="wash()">Wash</button>
-    <button onclick="playPet()">Play</button>
-  </div>
+<button onclick="feedPet()">Feed</button>
+<button onclick="washPet()">Wash</button>
+<button onclick="playPet()">Play</button>
 </div>
 
+<div class="course-grid">
+<div class="course-card" onclick="window.location.href='spanish.html'">Spanish Basics Lv:2</div>
+<div class="course-card" onclick="window.location.href='kanji.html'">Kanji Practice Lv:3</div>
+<div class="course-card" onclick="window.location.href='french.html'">French Phrases Lv:1</div>
+<div class="course-card" onclick="window.location.href='grammar.html'">Grammar Quiz Lv:2</div>
+</div>
+
+</div>
 </body>
 </html>

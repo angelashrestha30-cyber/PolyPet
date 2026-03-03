@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PolyPet Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body onload="updateBars()">
 
+<nav>
+  <h2>PolyPet</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="spanish.html">Flashcards</a>
+    <a href="grammar.html">Quiz</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Pet Dashboard</h1>
+
+  <div class="card">
+    <h2 id="petName" onclick="changeName()">Pika</h2>
+
+    <p>Hunger</p>
+    <div class="bar"><div id="hunger"></div></div>
+
+    <p>Hygiene</p>
+    <div class="bar"><div id="hygiene"></div></div>
+
+    <p>Play</p>
+    <div class="bar"><div id="play"></div></div>
+
+    <button onclick="feed()">Feed</button>
+    <button onclick="wash()">Wash</button>
+    <button onclick="playPet()">Play</button>
+  </div>
+</div>
+
+</body>
+</html>

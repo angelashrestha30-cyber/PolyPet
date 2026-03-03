@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Schedule Session</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Schedule a Tutoring Session</h1>
+
+  <div class="card">
+    <input type="date" id="sessionDate"><br><br>
+    <input type="time" id="sessionTime"><br><br>
+    <button onclick="schedule()">Schedule</button>
+
+    <h3 id="confirmation"></h3>
+  </div>
+</div>
+
+<script>
+function schedule() {
+  const date = document.getElementById("sessionDate").value;
+  const time = document.getElementById("sessionTime").value;
+
+  if (date && time) {
+    document.getElementById("confirmation").innerText =
+      "Session booked for " + date + " at " + time;
+  }
+}
+</script>
+
+</body>
+</html>

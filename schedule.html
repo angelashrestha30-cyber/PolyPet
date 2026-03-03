@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Schedule Session</title>
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
-<body>
+<body onload="checkLogin()">
+
+<nav>
+<h2>PolyPet</h2>
+<div>
+<a href="dashboard.html">Home</a>
+<a href="pets.html">Pet Collection</a>
+<a href="schedule.html">Schedule</a>
+<a href="resources.html">Resources</a>
+</div>
+</nav>
 
 <div class="container">
-  <h1>Schedule a Tutoring Session</h1>
 
-  <div class="card">
-    <input type="date" id="sessionDate"><br><br>
-    <input type="time" id="sessionTime"><br><br>
-    <button onclick="schedule()">Schedule</button>
-
-    <h3 id="confirmation"></h3>
-  </div>
+<div class="card">
+<h2>Schedule Session</h2>
+<input type="datetime-local" id="sessionDate">
+<button onclick="scheduleSession()">Set Session</button>
 </div>
 
-<script>
-function schedule() {
-  const date = document.getElementById("sessionDate").value;
-  const time = document.getElementById("sessionTime").value;
+<div class="card">
+<h2>World Clock</h2>
+<div id="clockList"></div>
+<button onclick="addCountry()">+</button>
+</div>
 
-  if (date && time) {
-    document.getElementById("confirmation").innerText =
-      "Session booked for " + date + " at " + time;
-  }
-}
-</script>
+<div class="card">
+<button onclick="window.location.href='excused.html'">
+Submit Excused Absence
+</button>
+</div>
 
+</div>
 </body>
 </html>

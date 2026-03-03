@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grammar Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="container">
+  <h1>Spanish Grammar Quiz</h1>
+
+  <div class="card">
+    <p>Estoy estudiando para el ____.</p>
+    <input type="text" id="q1">
+
+    <p>Mis amigos están en la ____.</p>
+    <input type="text" id="q2">
+
+    <br><br>
+    <button onclick="grade()">Submit</button>
+
+    <h3 id="result"></h3>
+  </div>
+</div>
+
+<script>
+function grade() {
+  let score = 0;
+  if (document.getElementById("q1").value.toLowerCase() === "examen") score++;
+  if (document.getElementById("q2").value.toLowerCase() === "biblioteca") score++;
+  document.getElementById("result").innerText = "Score: " + score + "/2";
+}
+</script>
+
+</body>
+</html>

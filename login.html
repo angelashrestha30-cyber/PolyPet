@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login | PolyPet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter username"><br><br>
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<script>
+function login() {
+  const user = document.getElementById("username").value;
+  if (user !== "") {
+    localStorage.setItem("user", user);
+    window.location.href = "dashboard.html";
+  }
+}
+</script>
+
+</body>
+</html>
